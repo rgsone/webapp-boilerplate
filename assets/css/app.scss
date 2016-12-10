@@ -1,0 +1,28 @@
+/* == import normalize =============================== */
+
+@import "~normalize.css";
+
+/* == var ============================================ */
+
+$color: rgba( 0, 0, 0, .8 );
+
+/* == includes ======================================= */
+
+@import "includes/helpers";
+
+/* == styles ========================================= */
+
+body {
+  background-color: cornflowerblue;
+	margin: 0;
+}
+
+h1 {
+	background-image: url( '../img/big-bg.png' );
+	color: $color;
+}
+
+h2 {
+	background-image: url( '../img/small-bg.png' );
+	color: $color;
+}

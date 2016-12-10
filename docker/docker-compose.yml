@@ -1,0 +1,14 @@
+version: '2'
+services:
+  web:
+    image: webdevops/php-apache-dev:debian-8
+    ports:
+      - "80:80"
+    volumes:
+      - ./..:/var/www/app
+      - ./php.ini:/opt/docker/etc/php/php.ini
+      - ./50-site.conf:/opt/docker/etc/httpd/vhost.common.d/50-site.conf
+    environment:
+      - ALLOW_OVERRIDE=true
+      - WEB_DOCUMENT_ROOT=/var/www/app/public
+      - WEB_ALIAS_DOMAIN=app.dev
